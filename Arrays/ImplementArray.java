@@ -14,9 +14,10 @@ public static void main(String[] args) {
 
     System.out.println(myarr);
 
-    myarr.remove(90);
+    // myarr.remove(2);
 
-    System.out.println(myarr);
+    System.out.println(myarr.max());
+    System.out.println(myarr.min());
     
 }
 
@@ -45,8 +46,8 @@ public static void main(String[] args) {
 
       str.append("[");
 
-      for(int i: this.items) {
-          str.append(i+", ");
+      for(int i=0; i<currentIndex; i++) {
+          str.append(this.items[i]+", ");
       }
       str.append("\b").append("\b").append("]");
       return str.toString() ;
@@ -66,6 +67,8 @@ public static void main(String[] args) {
 
     }
  
+
+    //remove element by index
 public void remove(int a) {
     if (a < 0 || a >= currentIndex) {
         throw new IndexOutOfBoundsException("Invalid index: " + a);
@@ -77,9 +80,35 @@ public void remove(int a) {
        }
     
        currentIndex--;  
-       this.items[currentIndex] = 0; 
  
 
+ }
+
+
+ //find max element
+ public int max(){
+    int res = 0;
+
+    for(int i=0; i<currentIndex; i++) {
+         if(res<this.items[i]) {
+            res = this.items[i];
+         }
+    }
+
+    return res;
+ }
+
+ //find min element
+ public int min(){
+    int res = this.items[0];
+
+    for(int i=1; i<currentIndex; i++) {
+         if(res>this.items[i]) {
+            res = this.items[i];
+         }
+    }
+
+    return res;
  }
 
 }
