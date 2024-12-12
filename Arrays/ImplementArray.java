@@ -1,5 +1,7 @@
  package Arrays;
 
+import java.util.Arrays;
+
 class ImplementArray {
 
 public static void main(String[] args) {
@@ -18,6 +20,10 @@ public static void main(String[] args) {
 
     System.out.println(myarr.max());
     System.out.println(myarr.min());
+//   System.out.println(Arrays.toString(myarr.reverseArray()));
+myarr.reverseArray2();
+ System.out.println(myarr);
+
     
 }
 
@@ -111,4 +117,24 @@ public void remove(int a) {
     return res;
  }
 
+
+ //reverse and return new array
+
+ public  int[] reverseArray() {
+    int[] resArr = new int[currentIndex];
+    for(int i=0; i<currentIndex; i++) {
+      resArr[i] = this.items[currentIndex - 1 - i];
+
+    }
+    return resArr;
+ }
+
+  //reverse an original array
+
+  public  void reverseArray2() {
+    for(int i=0; i<currentIndex/2; i++) {
+        this.items[i] = this.items[currentIndex - 1 - i];
+
+    }
+ }
 }
