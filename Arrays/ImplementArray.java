@@ -1,6 +1,5 @@
  package Arrays;
 
-import java.util.Arrays;
 
 class ImplementArray {
 
@@ -13,6 +12,11 @@ public static void main(String[] args) {
     myarr.insertItem(8);
     myarr.insertItem(3);
     myarr.insertItem(1);
+    myarr.insertItem(11);
+    myarr.insertItem(15);
+    myarr.insertItem(19);
+    
+    
 
     System.out.println(myarr);
 
@@ -39,8 +43,16 @@ myarr.reverseArray2();
         this.items = new int[InitialSize];
     }
 
-    // Insert a item
+    // Insert a item and dynamic array
     public  void insertItem (int a) {
+
+        if(currentIndex== items.length) {
+            int [] tempArr = new int[items.length*2];
+            for(int i=0; i<currentIndex; i++) {
+                tempArr[i] = items[i];
+            }
+            items = tempArr; 
+        }
         this.items[currentIndex] = a; 
         currentIndex++;
 
