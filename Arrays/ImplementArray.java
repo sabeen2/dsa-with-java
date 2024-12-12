@@ -14,7 +14,7 @@ public static void main(String[] args) {
 
     System.out.println(myarr);
 
-    myarr.remove(2);
+    myarr.remove(90);
 
     System.out.println(myarr);
     
@@ -67,13 +67,18 @@ public static void main(String[] args) {
     }
  
 public void remove(int a) {
+    if (a < 0 || a >= currentIndex) {
+        throw new IndexOutOfBoundsException("Invalid index: " + a);
+    }
 
-   for(int i=a; i<=currentIndex-2; i++) {
-    this.items[i] = this.items[i+1] ;
-   }
 
-   currentIndex--;  
-   this.items[currentIndex] = 0; 
+    for(int i=a; i<=currentIndex-2; i++) {
+        this.items[i] = this.items[i+1] ;
+       }
+    
+       currentIndex--;  
+       this.items[currentIndex] = 0; 
+ 
 
  }
 
