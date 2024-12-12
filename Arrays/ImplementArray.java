@@ -11,7 +11,7 @@ public static void main(String[] args) {
     myarr.insertItem(8);
     myarr.insertItem(3);
 
-    System.out.println(myarr);
+    System.out.println(myarr.findIndexByValue(8));
     
     
 }
@@ -34,9 +34,7 @@ public static void main(String[] args) {
 
     }
 
-
     //Print  array.
-
     public String toString () {
       StringBuilder str  = new StringBuilder();
 
@@ -44,14 +42,21 @@ public static void main(String[] args) {
 
       for(int i: this.items) {
           str.append(i+", ");
-
       }
       str.append("\b").append("\b").append("]");
-
-
       return str.toString() ;
 
     }
 
+    //method to do linear search in array
+    public int findIndexByValue (int a) {
+        for( int i=0; i<currentIndex; i++) {
+            if(this.items[i] == a ) {
+                return i;
+            }
+        }
+        return -1;
 
+
+    }
  }
