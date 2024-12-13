@@ -12,7 +12,7 @@ public class SingleNumber {
 
     }
 
-    //bruteforce method using nested loops : Time:O(n^2) Space: O(1)
+    //bruteforce method using nested loop: Time:O(n^2) Space: O(1)
     public static int bruteForceMethod(int nums[]) {
         for(int i=0; i<nums.length-1; i++) {
             boolean isUnique = true;
