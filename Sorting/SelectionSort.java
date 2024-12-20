@@ -10,7 +10,7 @@ public class SelectionSort {
         System.out.println(Arrays.toString(selectionSortRecursiveAlgo(arr, 0)));
     }
 
-    // Selection sort algorithm
+    // Selection sort algorithm : Time - O(n^2) 
     public static int[] selectionSortAlgo(int[] arr) {
         for(int i=0; i<arr.length-1; i++ ) {
             int minIndex = i;
