@@ -6,7 +6,7 @@ public class BubbleSort {
   public static void main(String[] args) {
     int[] arr = new int[]{7,8,3,1,2};
 
-  System.out.println(  Arrays.toString(bubbleSortAlgo(arr)));
+  System.out.println(  Arrays.toString(bubbleSortRecursion(arr, arr.length)));
     
   }
 
@@ -26,6 +26,26 @@ public class BubbleSort {
    return arr;
   }
 
+
+  //bubble sort with recursion
+
+  public static int[] bubbleSortRecursion(int[] arr, int num) {
+
+    if(num<=1) {
+        return arr;
+    }
+
+    for(int i=0; i< num- 1 ; i++) {
+       if(arr[i]> arr[i+1]) {
+        int temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+       }
+    }
+
+    return bubbleSortRecursion(arr, num-1);
+
+  }
 
  
 }
