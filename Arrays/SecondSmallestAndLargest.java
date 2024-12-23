@@ -76,15 +76,15 @@ public static void secondSmallestAndLargestOptimal(int[] arr) {
             secondLargest = i;
         }
         // System.out.println(largest + " largest"); 
-        System.out.println(smallest + " smallest"); 
+        // System.out.println(smallest + " smallest"); 
         // System.out.println(secondLargest + " secondLargest"); 
-        System.out.println(secondSmallest + " secondSmallest"); 
+        // System.out.println(secondSmallest + " secondSmallest"); 
     }
 
-    // System.out.println(largest + " largest"); 
-    // System.out.println(smallest + " smallest"); 
-    // System.out.println(secondLargest + " secondLargest"); 
-    // System.out.println(secondSmallest + " secondSmallest"); 
+    System.out.println(largest + " largest"); 
+    System.out.println(smallest + " smallest"); 
+    System.out.println(secondLargest + " secondLargest"); 
+    System.out.println(secondSmallest + " secondSmallest"); 
 }
 
 
