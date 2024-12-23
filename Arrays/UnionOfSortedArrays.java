@@ -2,6 +2,7 @@ package Arrays;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.TreeSet;
 
 public class UnionOfSortedArrays {
 
@@ -12,7 +13,7 @@ public class UnionOfSortedArrays {
      }
 
       public static ArrayList<Integer> findUnion(int a[], int b[]) {
-        HashSet<Integer> mySet = new HashSet<>(); 
+        TreeSet<Integer> mySet = new TreeSet<>(); 
         ArrayList<Integer> myArr = new ArrayList<>();
         for(int i:a) {
             mySet.add(i);
