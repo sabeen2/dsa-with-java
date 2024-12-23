@@ -3,6 +3,7 @@ package Arrays;
 public class SecondSmallestAndLargest {
 
      public static void main(String[] args) {
+        
         int[] arr = new int[] {6,1,9,5,3,11,19};
         // secondSmallestAndLargest(arr);
         secondSmallestAndLargestOptimal(arr);
@@ -16,6 +17,10 @@ public class SecondSmallestAndLargest {
         int smallest = Integer.MAX_VALUE;
         int secondLargest= Integer.MIN_VALUE;
         int secondSmallest = Integer.MAX_VALUE;
+        if (arr.length < 2)
+	{
+		return;
+	}
 
         for(int i: arr) {
             if(i>largest) {
@@ -49,6 +54,10 @@ public static void secondSmallestAndLargestOptimal(int[] arr) {
     int smallest = Integer.MAX_VALUE;
     int secondLargest= Integer.MIN_VALUE;
     int secondSmallest = Integer.MAX_VALUE;
+    if (arr.length < 2)
+	{
+		return;
+	}
     for(int i : arr) {
         if(i < smallest ) {
             secondSmallest = smallest;
@@ -66,12 +75,16 @@ public static void secondSmallestAndLargestOptimal(int[] arr) {
         else if(i>secondLargest) {
             secondLargest = i;
         }
+        // System.out.println(largest + " largest"); 
+        System.out.println(smallest + " smallest"); 
+        // System.out.println(secondLargest + " secondLargest"); 
+        System.out.println(secondSmallest + " secondSmallest"); 
     }
 
-    System.out.println(largest + " largest"); 
-    System.out.println(smallest + " smallest"); 
-    System.out.println(secondLargest + " secondLargest"); 
-    System.out.println(secondSmallest + " secondSmallest"); 
+    // System.out.println(largest + " largest"); 
+    // System.out.println(smallest + " smallest"); 
+    // System.out.println(secondLargest + " secondLargest"); 
+    // System.out.println(secondSmallest + " secondSmallest"); 
 }
 
 
