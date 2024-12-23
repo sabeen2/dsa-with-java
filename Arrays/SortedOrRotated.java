@@ -2,7 +2,7 @@ package Arrays;
 
 public class SortedOrRotated {
     public static void main(String[] args) {
-    int[] nums = new int[]{3,4,5,1,2};
+    // int[] nums = new int[]{3,4,5,1,2};
     int[] nums1 = new int[]{2,1,3,4};
 
 
